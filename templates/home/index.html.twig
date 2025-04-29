@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block body %}
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Bienvenido a la Aplicación</h1>
+        <p>Has iniciado sesión correctamente.</p>
+
+        <form action="{{ path('app_logout') }}" method="post">
+            <button type="submit">Cerrar sesión</button>
+        </form>
+    </div>
+    <div style="margin-top: 20px">
+        <a href="{{ path('app_empleado_index') }}">
+            <button>Ir a Empleados</button>
+        </a>
+        <a href="{{ path('app_proyecto_index') }}">
+            <button>Ir a Proyectos</button>
+        </a>
+    </div>
+
+{% endblock %}
